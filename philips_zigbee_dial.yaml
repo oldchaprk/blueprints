@@ -134,7 +134,7 @@ action:
           - "{{ forth_light != none }}"
           - "{{ scene == 4 }}"
         sequence:
-          - service: homeassistant.toggle
+          - service: homeassistant.turn_off
             target: !input "forth_light"
           - choose:
               - conditions: "{{ current_light != none }}"
